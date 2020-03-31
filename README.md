@@ -1,6 +1,6 @@
 # Autonomous-Driving
 
-# Descriptionb
+# Description
 
 Who do you think hates traffic more - humans or self-driving cars? The position of nearby automobiles is a key question for autonomous vehicles ― and it's at the heart of our newest challenge.
 
@@ -21,3 +21,11 @@ booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Rec
 pages={5452--5462},
 year={2019}
 }
+# Steps
+1、We do some eda to analyze the data,something like distribution of cars of each model type,visualize of the labels works on the images.. <br>
+2、Image preprocessing. we normalized,augment and remove some wrong to the image. <br>
+3、Use Wold Coordinate and Image Coordinate to generate the centerpoint and the 4 point of the box of cars.<br>
+4、we use centernet as the basebmodel for this competition, use resnet101,efficientNet-b0 and resnext101_34x4d to extract the features.<br>
+5、We caculate mask_loss, regr_loss and sum all the loss with weight. The mass_loss use focal loss and regr_loss use L1_loss. <br>
+6、Use AdamW as the optimizer.
+7、we use ensemble model as the final model whic include resnet101,efficientNet-b0 and resnext101_34x4d.
