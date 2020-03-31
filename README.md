@@ -29,3 +29,5 @@ year={2019}
 5、We caculate mask_loss, regr_loss and sum all the loss with weight. The mass_loss use focal loss and regr_loss use L1_loss. <br>
 6、Use AdamW as the optimizer.
 7、we use ensemble model as the final model whic include resnet101,efficientNet-b0 and resnext101_34x4d.
+
+# additional remarks
